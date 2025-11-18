@@ -8,7 +8,7 @@ const { mongoose } = require('./database'); // no se quiere todo el archivo sino
 app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev')); 
 app.use(express.json()); // método que ayuda a convertir el código para que el servidor pueda entender lo que viene del cliente.
-app.use(cors({origin: 'http://localhost:4200'})); // método para comunicar con el cliente
+app.use(cors({origin: 'http://localhost:3001'})); // método para comunicar con el cliente
 // rutas de nuestro servidor
 app.use('/api/empleados',require('./routes/empleado.routes'));
 app.use('/api/auth',require('./routes/auth.routes'));
